@@ -1,0 +1,36 @@
+<div class="container-fluid" id="authentication-wrapper">
+  <div class="welcome-message">
+    <h4>Log in to continue</h4>
+    <p class="mt-4 mb-2">
+      Select one of the users contained in the project to login and check their
+      respective actions according to their roles
+    </p>
+  </div>
+  <form #templateForm="ngForm">
+    <div class="row justify-content-md-center">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <input
+          kendoTextBox
+          name="Email"
+          [(ngModel)]="user.Email"
+          class="form-control mb-2"
+          type="email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <input
+          kendoTextBox
+          name="Password"
+          [(ngModel)]="user.Password"
+          class="form-control mb-2 mt-2"
+          type="password"
+          placeholder="Password"
+        />
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <button type="submit" class="submit-btn btn btn-success">Login</button>
+      </div>
+    </div>
+  </form>
+</div>

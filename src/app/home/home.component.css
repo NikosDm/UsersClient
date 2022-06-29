@@ -1,0 +1,15 @@
+#authentication-wrapper {
+  width: 80%;
+  text-align: center;
+}
+#wrap {
+  margin-bottom: 20px;
+}
+.welcome-message {
+  margin: 20px;
+  padding: 20px;
+}
+.submit-btn {
+  width: 30%;
+  margin: 20px 0;
+}

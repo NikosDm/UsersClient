@@ -1,0 +1,25 @@
+<kendo-grid
+  [kendoGridBinding]="gridView"
+  kendoGridSelectBy="UserID"
+  [pageSize]="20"
+  [pageable]="true"
+  [sortable]="true"
+  [reorderable]="true"
+  [resizable]="true"
+  [height]="500"
+  [columnMenu]="{ filter: true }"
+>
+  <kendo-grid-column field="FirstName" title="First Name" [width]="220">
+  </kendo-grid-column>
+  <kendo-grid-column field="LastName" title="Last Name" [width]="130">
+  </kendo-grid-column>
+  <kendo-grid-column field="Email" title="Email" [width]="220">
+  </kendo-grid-column>
+  <kendo-grid-column field="RoleID" title="Role" [width]="130">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <span *ngIf="dataItem.RoleID === 1">Admin</span>
+      <span *ngIf="dataItem.RoleID === 2">Manager</span>
+      <span *ngIf="dataItem.RoleID === 3">Editor</span>
+    </ng-template>
+  </kendo-grid-column>
+</kendo-grid>
