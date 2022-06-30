@@ -17,7 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
 
-
 @NgModule({
   declarations: [
     AppComponent,

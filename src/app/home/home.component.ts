@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.initializeForm();
+    if (this.auth.isLoggedIn()) this.router.navigateByUrl('users');
   }
 
   login() {

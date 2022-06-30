@@ -29,6 +29,10 @@ export class AuthService {
       map((responses: any) => {
         try {
           const users: User[] = responses[0];
+
+          //Set users to local storage so that RUD operations can perform
+          localStorage.setItem('users', JSON.stringify(users));
+
           const userTokens: UserToken[] = responses[1];
           const loggedInUser: User = users.find(
             (x) => x.Email === user.Email && x.Password === user.Password
@@ -65,6 +69,10 @@ export class AuthService {
   loggedUser() {
     const user = localStorage.getItem('user');
     return of(JSON.parse(user));
+  }
+
+  isLoggedIn() {
+    return localStorage.getItem('user');
   }
 
   private setCurrentUser(user: User, userToken: UserToken) {

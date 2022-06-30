@@ -17,7 +17,7 @@
       (input)="onFilter($event)"
     />
     <kendo-grid-spacer></kendo-grid-spacer>
-    <button kendoButton themeColor="primary" (onClick)="AddNewUser()">
+    <button kendoButton themeColor="primary" (click)="AddNewUser()">
       Add new user
     </button>
   </ng-template>
@@ -26,13 +26,6 @@
   <kendo-grid-column field="LastName" title="Last Name" [width]="130">
   </kendo-grid-column>
   <kendo-grid-column field="Email" title="Email" [width]="220">
-  </kendo-grid-column>
-  <kendo-grid-column field="RoleID" title="Role" [width]="130">
-    <ng-template kendoGridCellTemplate let-dataItem>
-      <span *ngIf="IsAdmin(dataItem.RoleID)">Admin</span>
-      <span *ngIf="IsManager(dataItem.RoleID)">Manager</span>
-      <span *ngIf="IsEditor(dataItem.RoleID)">Editor</span>
-    </ng-template>
   </kendo-grid-column>
   <kendo-grid-column field="RoleID" title="Role" [width]="130">
     <ng-template kendoGridCellTemplate let-dataItem>
