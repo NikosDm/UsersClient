@@ -1,3 +1,12 @@
+# Note for checkers
+
+You can login on the application using the following emails:
+`dummymail1@dummy.com` (Admin role)
+`dummymail3@dummy.com` (Manager role)
+`dummymail4@dummy.com` (Editor role)
+
+and the password `root1234`
+
 # UsersClientTwo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.

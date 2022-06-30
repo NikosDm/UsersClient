@@ -29,7 +29,7 @@ export class UserService {
     let newUsers: User[] = [];
     if (localStorage.getItem('users'))
       users = JSON.parse(localStorage.getItem('users'));
-    else return of(false);
+    else return -1;
 
     try {
       if (user.UserID === 0) {
@@ -49,25 +49,24 @@ export class UserService {
 
       localStorage.removeItem('users');
       localStorage.setItem('users', JSON.stringify(newUsers));
-      return of(true);
+      return user.UserID;
     } catch {
-      return of(false);
+      return user.UserID;
     }
   }
 
   deleteUser(userID: number) {
     let users: User[] = [];
-    let newUsers: User[] = [];
     if (localStorage.getItem('users'))
       users = JSON.parse(localStorage.getItem('users'));
     else return of(false);
 
     try {
       const index = users.findIndex((x) => x.UserID === userID);
-      newUsers = users.splice(index, 1);
+      users.splice(index, 1);
 
       localStorage.removeItem('users');
-      localStorage.setItem('users', JSON.stringify(newUsers));
+      localStorage.setItem('users', JSON.stringify(users));
 
       return of(true);
     } catch {

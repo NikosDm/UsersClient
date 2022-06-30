@@ -16,6 +16,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { NavigationModule } from '@progress/kendo-angular-navigation';
+import { NotificationModule } from '@progress/kendo-angular-notification';
+
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { NavigationModule } from '@progress/kendo-angular-navigation';
     LabelModule,
     HttpClientModule,
     NavigationModule,
+    NotificationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

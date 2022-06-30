@@ -56,6 +56,9 @@
         userDetailsForm.controls['Email'].invalid &&
         userDetailsForm.controls['Email'].touched
       "
+      [disabled]="
+        isUserAdmin && (auth.loggedUser() | async).RoleID === EditorRole
+      "
       name="Email"
       required
       class="form-control mb-2"
@@ -71,6 +74,9 @@
       <input
         type="radio"
         [value]="1"
+        [disabled]="
+          isUserAdmin && (auth.loggedUser() | async).RoleID === EditorRole
+        "
         [formControl]="userDetailsForm.controls['RoleID']"
       />
       Admin
@@ -79,6 +85,9 @@
       <input
         type="radio"
         [value]="2"
+        [disabled]="
+          isUserAdmin && (auth.loggedUser() | async).RoleID === EditorRole
+        "
         [formControl]="userDetailsForm.controls['RoleID']"
         class="ml-3"
       />
@@ -88,6 +97,9 @@
       <input
         type="radio"
         [value]="3"
+        [disabled]="
+          isUserAdmin && (auth.loggedUser() | async).RoleID === EditorRole
+        "
         [formControl]="userDetailsForm.controls['RoleID']"
         class="ml-3"
       />
@@ -98,12 +110,17 @@
   <div class="form-group mt-5">
     <button
       class="btn btn-success mr-4 action-button"
-      [disabled]="!userDetailsForm.valid"
+      [disabled]="!userDetailsForm.valid || disableSaveButton"
       type="submit"
     >
       Save
     </button>
     <button
+      [disabled]="
+        (auth.loggedUser() | async).UserID === userID ||
+        disableDeleteButton ||
+        (isUserAdmin && (auth.loggedUser() | async).RoleID === EditorRole)
+      "
       class="btn btn-danger ml-4 mr-2 action-button"
       (click)="delete()"
       type="button"
