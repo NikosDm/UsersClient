@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { process } from '@progress/kendo-data-query';
-import { User } from 'src/app/models/user';
+import { Role, User } from 'src/app/models/user';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -8,25 +10,31 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent implements OnInit {
-  public gridData: unknown[] = [
-    {
-      UserID: 1,
-      FirstName: 'Nikos',
-      LastName: 'Thoma',
-      Password: 'dasd',
-      Email: 'asdad@dasd.com',
-      RoleID: 1,
-    },
-  ];
-  public gridView: unknown[];
+  gridData: User[];
+  gridView: unknown[];
 
-  constructor() {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit() {
-    this.gridView = this.gridData;
+    this.userService.getAllUsers().subscribe((users) => {
+      this.gridData = users;
+      this.gridView = this.gridData;
+    });
   }
 
-  public onFilter(input: Event): void {
+  IsAdmin(roleID: number): boolean {
+    return roleID === Role.Admin;
+  }
+
+  IsManager(roleID: number): boolean {
+    return roleID === Role.Manager;
+  }
+
+  IsEditor(roleID: number): boolean {
+    return roleID === Role.Editor;
+  }
+
+  onFilter(input: Event): void {
     const inputValue = (input.target as HTMLInputElement).value;
 
     this.gridView = process(this.gridData, {
@@ -56,5 +64,13 @@ export class UserListComponent implements OnInit {
         ],
       },
     }).data;
+  }
+
+  AddNewUser() {
+    this.router.navigateByUrl('users/0');
+  }
+
+  onEdit(UserID: number) {
+    this.router.navigateByUrl(`users/${UserID}`);
   }
 }

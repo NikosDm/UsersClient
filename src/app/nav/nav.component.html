@@ -1,0 +1,18 @@
+<kendo-appbar position="top">
+  <kendo-appbar-section>
+    <h5 class="title">
+      Welcome
+      {{
+        (auth.loggedUser() | async).FirstName +
+          " " +
+          (auth.loggedUser() | async).LastName
+      }}
+    </h5>
+  </kendo-appbar-section>
+
+  <kendo-appbar-spacer width="80%"></kendo-appbar-spacer>
+
+  <kendo-appbar-section>
+    <button kendoButton (click)="onLogout()" fillMode="flat">Logout</button>
+  </kendo-appbar-section>
+</kendo-appbar>

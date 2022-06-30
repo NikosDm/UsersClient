@@ -12,3 +12,13 @@ export interface User {
   Password: string;
   RoleID: number;
 }
+
+export interface LoginDTO {
+  Email: string;
+  Password: string;
+}
+
+export interface UserToken {
+  UserID: number;
+  Token: string;
+}

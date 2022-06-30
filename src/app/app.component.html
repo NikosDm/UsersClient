@@ -1,3 +1,5 @@
+<app-nav *ngIf="auth.loggedUser() | async"></app-nav>
+
 <div class="container" style="margin-top: 5%">
   <router-outlet></router-outlet>
 </div>

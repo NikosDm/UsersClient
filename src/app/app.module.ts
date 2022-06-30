@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,9 @@ import { GridModule } from '@progress/kendo-angular-grid';
 import { LabelModule } from '@progress/kendo-angular-label';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NavComponent } from './nav/nav.component';
+import { NavigationModule } from '@progress/kendo-angular-navigation';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserListComponent,
     UserDetailsComponent,
     NotFoundComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InputsModule,
     GridModule,
     LabelModule,
+    HttpClientModule,
+    NavigationModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

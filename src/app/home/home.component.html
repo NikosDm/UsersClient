@@ -6,30 +6,55 @@
       respective actions according to their roles
     </p>
   </div>
-  <form #templateForm="ngForm">
+  <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && login()">
     <div class="row justify-content-md-center">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
         <input
           kendoTextBox
+          [class.is-invalid]="
+            loginForm.controls['Email'].invalid &&
+            loginForm.controls['Email'].touched
+          "
           name="Email"
-          [(ngModel)]="user.Email"
+          required
           class="form-control mb-2"
           type="email"
           placeholder="Email"
+          [formControl]="loginForm.controls['Email']"
         />
+      </div>
+      <div
+        *ngIf="loginForm.controls['Email'].errors?.required"
+        class="invalid-feedback"
+      >
+        Please enter an Email
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
         <input
           kendoTextBox
+          [class.is-invalid]="
+            loginForm.controls['Password'].invalid &&
+            loginForm.controls['Password'].touched
+          "
+          required
           name="Password"
-          [(ngModel)]="user.Password"
           class="form-control mb-2 mt-2"
           type="password"
           placeholder="Password"
+          [formControl]="loginForm.controls['Password']"
         />
+      </div>
+      <div
+        *ngIf="loginForm.controls['Password'].errors?.required"
+        class="invalid-feedback"
+      >
+        Please enter a Password
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12">
         <button type="submit" class="submit-btn btn btn-success">Login</button>
+      </div>
+      <div *ngIf="showError" class="col-xs-12 col-sm-12 col-md-12 error">
+        Invalid credentials. Try again using correct credentials
       </div>
     </div>
   </form>

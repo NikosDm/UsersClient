@@ -1,0 +1,258 @@
+[
+  {
+    "UserID": 1,
+    "FirstName": "Nick",
+    "LastName": "Thomas",
+    "Email": "dummymail1@dummy.com",
+    "Password": "root1234",
+    "RoleID": 1
+  },
+  {
+    "UserID": 2,
+    "FirstName": "Scott",
+    "LastName": "Ian",
+    "Email": "dummymail2@dummy.com",
+    "Password": "root1234",
+    "RoleID": 1
+  },
+  {
+    "UserID": 3,
+    "FirstName": "Ian",
+    "LastName": "Scott",
+    "Email": "dummymail3@dummy.com",
+    "Password": "root1234",
+    "RoleID": 2
+  },
+  {
+    "UserID": 4,
+    "FirstName": "George",
+    "LastName": "Larsson",
+    "Email": "dummymail4@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 5,
+    "FirstName": "John",
+    "LastName": "Stevenson",
+    "Email": "dummymail5@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 6,
+    "FirstName": "Michael",
+    "LastName": "Muller",
+    "Email": "dummymail6@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 7,
+    "FirstName": "Jannis",
+    "LastName": "Courtney",
+    "Email": "dummymail7@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 8,
+    "FirstName": "Tina",
+    "LastName": "Larsson",
+    "Email": "dummymail8@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 9,
+    "FirstName": "Selina",
+    "LastName": "Turner",
+    "Email": "dummymail9@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 10,
+    "FirstName": "Robert",
+    "LastName": "Treis",
+    "Email": "dummymail10@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 11,
+    "FirstName": "Gina",
+    "LastName": "Meriot",
+    "Email": "dummymail11@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 12,
+    "FirstName": "Lina",
+    "LastName": "Scott",
+    "Email": "dummymail12@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 13,
+    "FirstName": "Gus",
+    "LastName": "Kafeison",
+    "Email": "dummymail13@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 14,
+    "FirstName": "Helen",
+    "LastName": "Marson",
+    "Email": "dummymail14@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 15,
+    "FirstName": "Rita",
+    "LastName": "Tucker",
+    "Email": "dummymail15@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 16,
+    "FirstName": "Bella",
+    "LastName": "Tron",
+    "Email": "dummymail16@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 17,
+    "FirstName": "Maria",
+    "LastName": "Steiger",
+    "Email": "dummymail17@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 18,
+    "FirstName": "Valia",
+    "LastName": "Lavdo",
+    "Email": "dummymail18@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 19,
+    "FirstName": "Mohammed",
+    "LastName": "Ali",
+    "Email": "dummymail19@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 20,
+    "FirstName": "Briana",
+    "LastName": "Shemelt",
+    "Email": "dummymail20@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 21,
+    "FirstName": "Friedrick",
+    "LastName": "Macknish",
+    "Email": "dummymail21@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 22,
+    "FirstName": "Rudolf",
+    "LastName": "Consadine",
+    "Email": "dummymail22@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 23,
+    "FirstName": "Uri",
+    "LastName": "Champken",
+    "Email": "dummymail23@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 24,
+    "FirstName": "Kit",
+    "LastName": "Utteridge",
+    "Email": "dummymail24@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 25,
+    "FirstName": "Matthus",
+    "LastName": "Shyres",
+    "Email": "dummymail25@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 26,
+    "FirstName": "Bret",
+    "LastName": "Barnsdall",
+    "Email": "dummymail26@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 27,
+    "FirstName": "Rita",
+    "LastName": "Tucker",
+    "Email": "dummymail27@dummy.com",
+    "Password": "root1234",
+    "RoleID": 3
+  },
+  {
+    "UserID": 28,
+    "FirstName": "Matthus",
+    "LastName": "Shyres",
+    "Email": "dummymail28@dummy.com",
+    "Password": "root1234",
+    "RoleID": 2
+  },
+  {
+    "UserID": 29,
+    "FirstName": "Meggi",
+    "LastName": "Westman",
+    "Email": "dummymail29@dummy.com",
+    "Password": "root1234",
+    "RoleID": 2
+  },
+  {
+    "UserID": 30,
+    "FirstName": "Yussuf",
+    "LastName": "Nasref",
+    "Email": "dummymail30@dummy.com",
+    "Password": "root1234",
+    "RoleID": 2
+  },
+  {
+    "UserID": 31,
+    "FirstName": "Ahmet",
+    "LastName": "Sharawi",
+    "Email": "dummymail31@dummy.com",
+    "Password": "root1234",
+    "RoleID": 2
+  },
+  {
+    "UserID": 32,
+    "FirstName": "Arri",
+    "LastName": "Halton",
+    "Email": "dummymail32@dummy.com",
+    "Password": "root1234",
+    "RoleID": 2
+  }
+]

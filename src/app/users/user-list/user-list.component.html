@@ -9,6 +9,18 @@
   [height]="500"
   [columnMenu]="{ filter: true }"
 >
+  <ng-template kendoGridToolbarTemplate>
+    <input
+      [style.width.px]="180"
+      placeholder="Search in all columns..."
+      kendoTextBox
+      (input)="onFilter($event)"
+    />
+    <kendo-grid-spacer></kendo-grid-spacer>
+    <button kendoButton themeColor="primary" (onClick)="AddNewUser()">
+      Add new user
+    </button>
+  </ng-template>
   <kendo-grid-column field="FirstName" title="First Name" [width]="220">
   </kendo-grid-column>
   <kendo-grid-column field="LastName" title="Last Name" [width]="130">
@@ -17,9 +29,23 @@
   </kendo-grid-column>
   <kendo-grid-column field="RoleID" title="Role" [width]="130">
     <ng-template kendoGridCellTemplate let-dataItem>
-      <span *ngIf="dataItem.RoleID === 1">Admin</span>
-      <span *ngIf="dataItem.RoleID === 2">Manager</span>
-      <span *ngIf="dataItem.RoleID === 3">Editor</span>
+      <span *ngIf="IsAdmin(dataItem.RoleID)">Admin</span>
+      <span *ngIf="IsManager(dataItem.RoleID)">Manager</span>
+      <span *ngIf="IsEditor(dataItem.RoleID)">Editor</span>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column field="RoleID" title="Role" [width]="130">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <span *ngIf="IsAdmin(dataItem.RoleID)">Admin</span>
+      <span *ngIf="IsManager(dataItem.RoleID)">Manager</span>
+      <span *ngIf="IsEditor(dataItem.RoleID)">Editor</span>
+    </ng-template>
+  </kendo-grid-column>
+  <kendo-grid-column [width]="130">
+    <ng-template kendoGridCellTemplate let-dataItem>
+      <button kendoButton (click)="onEdit(dataItem.UserID)" fillMode="flat">
+        Edit User
+      </button>
     </ng-template>
   </kendo-grid-column>
 </kendo-grid>
